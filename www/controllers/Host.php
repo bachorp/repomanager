@@ -300,7 +300,7 @@ class Host
      */
     public function deleteByHostname(string $hostname) : void
     {
-        $id = $this->model->getIdByHostname($hostname);
+        $id = $this->getIdByHostname($hostname);
 
         if (empty($id)) {
             throw new Exception('Unknown hostname ' . $hostname);
